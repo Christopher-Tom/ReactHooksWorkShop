@@ -19,8 +19,8 @@ function Greeting() {
   )
 }
 
-function App() {
+function StateExample() {
   return <Greeting />
 }
 
-export default App
+export default StateExample

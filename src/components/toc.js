@@ -1,15 +1,9 @@
-import React from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import StateExample from './01'
-import About from './02'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import StateExercise from "./exercise/01";
+import EffectExercise from "./exercise/02";
 
 export default function TableOfContents() {
-  
   return (
     <div>
       Choose an exercise
@@ -20,10 +14,10 @@ export default function TableOfContents() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/use-state">Use State</Link>
             </li>
             <li>
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/use-effect">Use Effect</Link>
             </li>
           </ul>
 
@@ -38,15 +32,17 @@ export default function TableOfContents() {
           */}
           <Switch>
             <Route exact path="/">
-              <About />
+              <EffectExercise />
             </Route>
-            <Route path="/about">
-              <StateExample />
+            <Route path="/use-state">
+              <StateExercise />
+            </Route>
+            <Route path="/use-effect">
+              <EffectExercise />
             </Route>
           </Switch>
         </div>
       </Router>
     </div>
-  )
+  );
 }
-
